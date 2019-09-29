@@ -15,7 +15,7 @@ public abstract class PartTimeEmployee extends EmployeeClass {
         return rate;
     }
 
-    public void setRate(float rate)
+    private void setRate(float rate)
     {
         this.rate = rate;
     }
@@ -25,7 +25,7 @@ public abstract class PartTimeEmployee extends EmployeeClass {
         return hoursWorked;
     }
 
-    public void setHoursWorked(int hoursWorked)
+    private void setHoursWorked(int hoursWorked)
     {
         this.hoursWorked = hoursWorked;
     }
