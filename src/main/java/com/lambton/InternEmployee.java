@@ -1,24 +1,42 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class InternEmployee extends EmployeeClass {
+public class InternEmployee extends EmployeeClass implements IPrintable {
 
     private String schoolName;
 
-    public String getSchoolName() {
+    private String getSchoolName()
+    {
         return schoolName;
     }
 
-    public void setSchoolName(String schoolName) {
+    private void setSchoolName(String schoolName)
+    {
         this.schoolName = schoolName;
     }
 
-    public InternEmployee(String schoolName) {
-        this.schoolName = schoolName;
+    public InternEmployee()
+    {
     }
 
-    public InternEmployee(String name, int age, String schoolName) {
+    public InternEmployee(String name, int age, String schoolName)
+    {
         super(name, age);
         this.schoolName = schoolName;
+    }
+
+    @Override
+    public float calculateEarning()
+    {
+        return TOTAL_EARNING;
+    }
+
+    @Override
+    public void printMyData()
+    {
+        System.out.println("Name:" + " " + getName());
+        System.out.println("Year of Birth:" + " " + getBirthYear());
+        System.out.println("SchoolName:" + " " + getSchoolName());
+        System.out.println("Earnings:" + " " + calculateEarning());
     }
 }
