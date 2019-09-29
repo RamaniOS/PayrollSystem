@@ -8,7 +8,7 @@ public abstract class EmployeeClass implements IPrintable {
     //Properties
     private String name;
     private int age;
-    float TOTAL_EARNING = 1000.0f;
+    float EARNING = 1000.0f;
 
     //Constructor
     public EmployeeClass() {

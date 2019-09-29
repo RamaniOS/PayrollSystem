@@ -28,7 +28,7 @@ public class InternEmployee extends EmployeeClass {
     @Override
     public float calculateEarning()
     {
-        return TOTAL_EARNING;
+        return EARNING;
     }
 
     @Override
