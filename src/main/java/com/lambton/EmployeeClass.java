@@ -3,11 +3,12 @@ package com.lambton;
 import java.time.LocalDate;
 
 //Created by Ramanpreet Singh
-public class EmployeeClass implements IPrintable {
+public abstract class EmployeeClass  {
 
     //Properties
     private String name;
     private int age;
+    float TOTAL_EARNING = 1000.0f;
 
     //Constructor
     public EmployeeClass() {
@@ -20,41 +21,36 @@ public class EmployeeClass implements IPrintable {
     }
 
     //Getters & Setters
-    private String getName()
+    public String getName()
     {
         return name;
     }
 
-    public void setName(String name)
+    private void setName(String name)
     {
         this.name = name;
     }
 
-    private int getAge()
+    public int getAge()
     {
         return age;
     }
 
-    public void setAge(int age)
+    private void setAge(int age)
     {
         this.age = age;
     }
 
     //Custom functions
+    public int getBirthYear()
+    {
+        return calculateBirthYear();
+    }
+
     private int calculateBirthYear()
     {
         return LocalDate.now().getYear() - getAge();
     }
 
-    private Float calculateEarning()
-    {
-        return 1000.0f;
-    }
-
-    @Override
-    public void printMyData()
-    {
-        System.out.println("Name:" + " " + getName());
-        System.out.println("Year of Birth:" + " " + calculateBirthYear());
-    }
+    public abstract float calculateEarning();
 }
