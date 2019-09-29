@@ -3,15 +3,15 @@ package com.lambton;
 //Created by Ramanpreet Singh
 public class PermanentEmployee extends EmployeeClass {
 
-    float salary;
-    float bonus;
+    private float salary;
+    private float bonus;
 
     public float getSalary()
     {
         return salary;
     }
 
-    public void setSalary(float salary)
+    private void setSalary(float salary)
     {
         this.salary = salary;
     }
@@ -21,15 +21,13 @@ public class PermanentEmployee extends EmployeeClass {
         return bonus;
     }
 
-    public void setBonus(float bonus)
+    private void setBonus(float bonus)
     {
         this.bonus = bonus;
     }
 
-    public PermanentEmployee(float salary, float bonus)
+    public PermanentEmployee()
     {
-        this.salary = salary;
-        this.bonus = bonus;
     }
 
     public PermanentEmployee(String name, int age, float salary, float bonus)
