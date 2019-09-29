@@ -1,7 +1,7 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class InternEmployee extends EmployeeClass implements IPrintable {
+public class InternEmployee extends EmployeeClass {
 
     private String schoolName;
 

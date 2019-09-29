@@ -42,4 +42,9 @@ public class PermanentEmployee extends EmployeeClass {
     {
         return getSalary() + getBonus();
     }
+
+    @Override
+    public void printMyData() {
+
+    }
 }

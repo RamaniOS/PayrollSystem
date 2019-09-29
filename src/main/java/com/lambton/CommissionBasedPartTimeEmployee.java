@@ -1,7 +1,7 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class CommissionBasedPartTimeEmployee extends PartTimeEmployee implements IPrintable {
+public class CommissionBasedPartTimeEmployee extends PartTimeEmployee {
 
     private float CommissionPercentage;
 

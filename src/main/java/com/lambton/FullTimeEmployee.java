@@ -42,4 +42,9 @@ public class FullTimeEmployee extends EmployeeClass {
     {
         return getSalary() + getBonus();
     }
+
+    @Override
+    public void printMyData() {
+
+    }
 }

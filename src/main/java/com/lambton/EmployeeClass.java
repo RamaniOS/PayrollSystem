@@ -3,7 +3,7 @@ package com.lambton;
 import java.time.LocalDate;
 
 //Created by Ramanpreet Singh
-public abstract class EmployeeClass  {
+public abstract class EmployeeClass implements IPrintable {
 
     //Properties
     private String name;
@@ -53,4 +53,6 @@ public abstract class EmployeeClass  {
     }
 
     public abstract float calculateEarning();
+
+    public abstract void printMyData();
 }

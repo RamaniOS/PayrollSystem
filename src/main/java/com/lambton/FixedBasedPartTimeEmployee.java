@@ -1,7 +1,7 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class FixedBasedPartTimeEmployee extends PartTimeEmployee implements IPrintable {
+public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
 
     private float fixedAmount;
 
