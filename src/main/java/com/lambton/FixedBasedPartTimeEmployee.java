@@ -1,28 +1,43 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
+public class FixedBasedPartTimeEmployee extends PartTimeEmployee implements IPrintable {
 
-    float fixedAmount;
+    private float fixedAmount;
 
-    public float getFixedAmount() {
+    private float getFixedAmount()
+    {
         return fixedAmount;
     }
 
-    public void setFixedAmount(float fixedAmount) {
+    private void setFixedAmount(float fixedAmount)
+    {
         this.fixedAmount = fixedAmount;
     }
 
-    public FixedBasedPartTimeEmployee(float rate, int hoursWorked) {
-        super(rate, hoursWorked);
+    public FixedBasedPartTimeEmployee()
+    {
     }
 
-    public FixedBasedPartTimeEmployee(String name, int age, float rate, int hoursWorked) {
+    public FixedBasedPartTimeEmployee(String name, int age, float rate, int hoursWorked, float fixedAmount)
+    {
         super(name, age, rate, hoursWorked);
+        this.fixedAmount = fixedAmount;
     }
 
-    public float calculateEarnings()
+    @Override
+    public float calculateEarning()
     {
         return (getRate() * getHoursWorked() + getFixedAmount());
+    }
+
+    @Override
+    public void printMyData() {
+        System.out.println("Name:" + " " + getName());
+        System.out.println("Year of Birth:" + " " + getBirthYear());
+        System.out.println("Rate:" + " " + getRate());
+        System.out.println("HoursWorked:" + " " + getHoursWorked());
+        System.out.println("Fixed Amount:" + " " + getFixedAmount());
+        System.out.println("Earnings:" + " " + calculateEarning());
     }
 }
