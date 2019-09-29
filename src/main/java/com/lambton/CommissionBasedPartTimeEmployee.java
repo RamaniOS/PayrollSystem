@@ -1,29 +1,54 @@
 package com.lambton;
 
 //Created by Ramanpreet Singh
-public class CommissionBasedPartTimeEmployee extends PartTimeEmployee {
+public class CommissionBasedPartTimeEmployee extends PartTimeEmployee implements IPrintable {
 
     private float CommissionPercentage;
 
-    public CommissionBasedPartTimeEmployee(float rate, int hoursWorked) {
-        super(rate, hoursWorked);
+    public CommissionBasedPartTimeEmployee()
+    {
     }
 
-    public CommissionBasedPartTimeEmployee(String name, int age, float rate, int hoursWorked) {
+    public CommissionBasedPartTimeEmployee(String name, int age, float rate, int hoursWorked, float CommissionPercentage)
+    {
         super(name, age, rate, hoursWorked);
+        this.CommissionPercentage = CommissionPercentage;
     }
 
-    public float getCommission() {
+    private float getCommissionPercentage()
+    {
         return CommissionPercentage;
     }
 
-    public void setCommission(float CommissionPercentage) {
+    private void setCommission(float CommissionPercentage)
+    {
         CommissionPercentage = CommissionPercentage;
     }
 
-    public float calculateEarnings()
+    private float calculateHours()
     {
-        return (getRate() * getHoursWorked()) + getCommission();
+        return getRate() * getHoursWorked();
+    }
+
+    private float calculateCommission()
+    {
+        float calculateHours = calculateHours();
+        return (calculateHours + ((calculateHours * getCommissionPercentage()) / 100));
+    }
+
+    @Override
+    public float calculateEarning()
+    {
+        return calculateCommission();
+    }
+
+    @Override
+    public void printMyData() {
+        System.out.println("Name:" + " " + getName());
+        System.out.println("Year of Birth:" + " " + getBirthYear());
+        System.out.println("Rate:" + " " + getRate());
+        System.out.println("HoursWorked:" + " " + getHoursWorked());
+        System.out.println("Commission:" + " " + getCommissionPercentage()+"%");
+        System.out.println("Earnings:" + " " + calculateEarning());
     }
 }
-
