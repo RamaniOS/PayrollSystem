@@ -36,4 +36,10 @@ public abstract class PartTimeEmployee extends EmployeeClass {
         this.rate = rate;
         this.hoursWorked = hoursWorked;
     }
+
+    @Override
+    public void printMyData() {
+        System.out.println("Name:" + " " + getName());
+        System.out.println("Year of Birth:" + " " + getBirthYear());
+    }
 }
