@@ -45,6 +45,7 @@ public class FullTimeEmployee extends EmployeeClass {
 
     @Override
     public void printMyData() {
-
+        System.out.println("Name:" + " " + getName());
+        System.out.println("Year of Birth:" + " " + getBirthYear());
     }
 }
