@@ -44,8 +44,8 @@ public class CommissionBasedPartTimeEmployee extends PartTimeEmployee {
 
     @Override
     public void printMyData() {
-        System.out.println("Name:" + " " + getName());
-        System.out.println("Year of Birth:" + " " + getBirthYear());
+        super.printMyData();
+        System.out.println("Employee is PartTime / Commissioned");
         System.out.println("Rate:" + " " + getRate());
         System.out.println("HoursWorked:" + " " + getHoursWorked());
         System.out.println("Commission:" + " " + getCommissionPercentage()+"%");
