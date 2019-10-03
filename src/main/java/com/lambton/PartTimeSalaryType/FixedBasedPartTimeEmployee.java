@@ -1,4 +1,6 @@
-package com.lambton;
+package com.lambton.PartTimeSalaryType;
+
+import com.lambton.EmployeeType.PartTimeEmployee;
 
 //Created by Ramanpreet Singh
 public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
