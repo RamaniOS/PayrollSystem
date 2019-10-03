@@ -1,4 +1,4 @@
-package com.lambton;
+package com.lambton.MISC;
 
 //Created by Ramanpreet Singh
 public class NameLengthException extends Exception {
