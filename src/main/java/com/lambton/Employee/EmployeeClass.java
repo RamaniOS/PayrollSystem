@@ -1,4 +1,6 @@
-package com.lambton;
+package com.lambton.Employee;
+
+import com.lambton.MISC.IPrintable;
 
 import java.time.LocalDate;
 

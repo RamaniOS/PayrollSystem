@@ -1,4 +1,6 @@
-package com.lambton;
+package com.lambton.Employee;
+
+import com.lambton.Employee.EmployeeClass;
 
 //Created by Ramanpreet Singh
 public class PermanentEmployee extends EmployeeClass {
