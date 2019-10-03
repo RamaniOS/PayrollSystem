@@ -1,4 +1,6 @@
-package com.lambton;
+package com.lambton.EmployeeType;
+
+import com.lambton.Employee.EmployeeClass;
 
 //Created by Ramanpreet Singh
 public abstract class PartTimeEmployee extends EmployeeClass {

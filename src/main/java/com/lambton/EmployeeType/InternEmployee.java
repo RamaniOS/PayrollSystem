@@ -1,4 +1,6 @@
-package com.lambton;
+package com.lambton.EmployeeType;
+
+import com.lambton.Employee.EmployeeClass;
 
 //Created by Ramanpreet Singh
 public class InternEmployee extends EmployeeClass {
@@ -28,7 +30,7 @@ public class InternEmployee extends EmployeeClass {
     @Override
     public float calculateEarning()
     {
-        return EARNING;
+        return 1000.0f;
     }
 
     @Override
