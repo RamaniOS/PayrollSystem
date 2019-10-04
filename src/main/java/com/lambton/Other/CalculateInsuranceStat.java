@@ -32,7 +32,7 @@ public class CalculateInsuranceStat {
 
             insuranceDate = insuranceDate.substring(5,10);
             insuranceDate = String.format("%d-%s", currentYear, insuranceDate);
-            System.out.println("Nitin 1:" + insuranceDate + ":");
+            //System.out.println("Nitin 1:" + insuranceDate + ":");
 
             // 2. check difference of months.
             if((currentMonth - insuranceMonth) > 0){

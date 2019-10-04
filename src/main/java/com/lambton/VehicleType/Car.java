@@ -7,25 +7,23 @@ import com.lambton.Other.CalculateInsuranceStat;
 import com.lambton.Vehicle.Vehicle;
 
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
 
 /// This is the Car class inherited from parent class 'Vehicle', containing the information of vehicle type car.
 public class Car extends Vehicle {
 
     //-----------------------------------------------------------------------
-    public enum FuelType {
-        petrol, diesel, gas, Tesla
-    }
+//    public enum FuelType {
+//        petrol, diesel, gas, Tesla
+//    }
     /** Properties*/
     protected float price;
     protected int seater;
-    protected FuelType fuelType;
+    protected String fuelType;
 
     //-----------------------------------------------------------------------
     /** Constructor*/
-    public Car(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType, float price, int seater, FuelType fuelType) {
-        super(manufacturer, plateNo, model, insuranceDate, milage, vehicleType);
+    public Car(String vehicleType, String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, float price, int seater, String fuelType) {
+        super(vehicleType, manufacturer, plateNo, model, insuranceDate, milage);
         this.price = price;
         this.seater = seater;
         this.fuelType = fuelType;
@@ -49,11 +47,11 @@ public class Car extends Vehicle {
         this.seater = seater;
     }
 
-    public FuelType getFuelType() {
+    public String getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(FuelType fuelType) {
+    public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
 
@@ -75,6 +73,18 @@ public class Car extends Vehicle {
 
     @Override
     public void printMyData() {
+
+        System.out.println("//-----------------------------------------------------------------------");
+        System.out.println("Vehicle Type:" + " " + getVehicleType());//
+        System.out.println("Manufacturer:" + " " + getManufacturer());//
+        System.out.println("Plate No.:" + " " + getPlateNo());//
+        System.out.println("Model:" + " " + getModel());//
+        System.out.println("Insurance Date:" + " " + getInsuranceDate());//
+        System.out.println("Insurance Status:" + " " + calculateInsuranceStatus());
+        float milage = getMilage();
+        System.out.println("Milage:" + " " + milage);//
+        System.out.println("Milage Status:" + " " + super.statusOfMilage(milage));
+        System.out.println("//-----------------------------------------------------------------------");
 
     }
 }

@@ -11,28 +11,26 @@ import java.time.LocalDate;
 public class MotorCycle extends Vehicle{
 
     //-----------------------------------------------------------------------
-    public enum FuelType {
-        petrol, diesel, gas
-    }
+//    public enum FuelType {
+//        petrol, diesel, gas
+//    }
 
     /** Properties*/
-    protected VehicleType vehicleType;
     protected float price;
     protected int seater;
-    protected FuelType fuelType;
+    protected String fuelType;
+
+    //-----------------------------------------------------------------------
+    /** Constructor*/
+    public MotorCycle(String vehicleType, String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, float price, int seater, String fuelType) {
+        super(vehicleType, manufacturer, plateNo, model, insuranceDate, milage);
+        this.price = price;
+        this.seater = seater;
+        this.fuelType = fuelType;
+    }
 
     //-----------------------------------------------------------------------
     /** Getter - Setter*/
-    @Override
-    public VehicleType getVehicleType() {
-        return vehicleType;
-    }
-
-    @Override
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
     public float getPrice() {
         return price;
     }
@@ -49,21 +47,11 @@ public class MotorCycle extends Vehicle{
         this.seater = seater;
     }
 
-    public FuelType getFuelType() {
+    public String getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(FuelType fuelType) {
-        this.fuelType = fuelType;
-    }
-
-    //-----------------------------------------------------------------------
-    /** Constructor*/
-    public MotorCycle(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType, VehicleType vehicleType1, float price, int seater, FuelType fuelType) {
-        super(manufacturer, plateNo, model, insuranceDate, milage, vehicleType);
-        this.vehicleType = vehicleType1;
-        this.price = price;
-        this.seater = seater;
+    public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
 
@@ -84,6 +72,19 @@ public class MotorCycle extends Vehicle{
 
     @Override
     public void printMyData() {
+
+        System.out.println("//-----------------------------------------------------------------------");
+        System.out.println("Vehicle Type:" + " " + getVehicleType());//
+        System.out.println("Manufacturer:" + " " + getManufacturer());//
+        System.out.println("Plate No.:" + " " + getPlateNo());//
+        System.out.println("Model:" + " " + getModel());//
+        System.out.println("Insurance Date:" + " " + getInsuranceDate());//
+        System.out.println("Insurance Status:" + " " + calculateInsuranceStatus());
+        float milage = getMilage();
+        System.out.println("Milage:" + " " + milage);//
+        System.out.println("Milage Status:" + " " + super.statusOfMilage(milage));
+        System.out.println("//-----------------------------------------------------------------------");
+
 
     }
 

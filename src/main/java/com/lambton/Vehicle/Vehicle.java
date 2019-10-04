@@ -5,7 +5,6 @@
 package com.lambton.Vehicle;
 
 import com.lambton.Other.IDispay;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.time.LocalDate;
 
@@ -14,31 +13,39 @@ import java.time.LocalDate;
 public abstract class Vehicle implements IDispay {
 
     //-----------------------------------------------------------------------
-    public enum VehicleType {
-        car, motorcycle
-    }
+//    public enum VehicleType {
+//        car, motorcycle
+//    }
 
     /** Properties*/
+    protected String vehicleType;
     protected String manufacturer;
     protected String plateNo;
     protected String model;
     protected LocalDate insuranceDate;
     protected float milage;
-    protected VehicleType vehicleType;
 
     //-----------------------------------------------------------------------
     /** Constructor*/
-    public Vehicle(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType) {
+    public Vehicle(String vehicleType, String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage) {
+        this.vehicleType = vehicleType;
         this.manufacturer = manufacturer;
         this.plateNo = plateNo;
         this.model = model;
         this.insuranceDate = insuranceDate;
         this.milage = milage;
-        this.vehicleType = vehicleType;
     }
 
     //-----------------------------------------------------------------------
     /** Getter - Setter*/
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
     public String getManufacturer() {
         return manufacturer;
     }
@@ -77,14 +84,6 @@ public abstract class Vehicle implements IDispay {
 
     public void setMilage(float milage) {
         this.milage = milage;
-    }
-
-    public VehicleType getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
     }
 
     //-----------------------------------------------------------------------
