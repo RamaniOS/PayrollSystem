@@ -15,6 +15,10 @@ public class NitinMain {
         Car c1 = new Car("car", "Mercedies", "PDO123", "Sports", insuranceDate , 13.50f, 33000.00f, 2, "petrol");
         c1.printMyData();
 
+        LocalDate insuranceDate2 = LocalDate.parse("2018-11-02");
+        Car c2 = new Car("car", "Mercedies", "PDO123", "Sports", insuranceDate , 13.50f, 33000.00f, 2, "petrol");
+        c2.printMyData();
+
      //   .
     }
 }
