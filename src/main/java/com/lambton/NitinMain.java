@@ -43,6 +43,10 @@ public class NitinMain {
         Car c8 = new Car("car", "Maruti", "PDO323", "Sports", insuranceDate , 13.50f, 33000.00f, 2, "petrol");
         c8.printMyData();
 
+        LocalDate insuranceDate9 = LocalDate.parse("2018-11-09");
+        Car c9 = new Car("car", "Maruti", "PDO323", "Sports", insuranceDate , 13.50f, 33000.00f, 2, "petrol");
+        c9.printMyData();
+
 
 
 
