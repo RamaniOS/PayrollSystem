@@ -7,7 +7,7 @@ package com.lambton.Vehicle;
 import com.lambton.Other.IDispay;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 /// This is the Vehicle class, containing the information of Employee's Vehicle.
@@ -21,12 +21,12 @@ public abstract class Vehicle implements IDispay {
     protected String manufacturer;
     protected String plateNo;
     protected String model;
-    protected LocalDate insuranceDate;
+    protected LocalDateTime insuranceDate;
     protected float milage;
     protected VehicleType vehicleType;
 
     /** Constructor*/
-    public Vehicle(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType) {
+    public Vehicle(String manufacturer, String plateNo, String model, LocalDateTime insuranceDate, float milage, VehicleType vehicleType) {
         this.manufacturer = manufacturer;
         this.plateNo = plateNo;
         this.model = model;
@@ -60,11 +60,11 @@ public abstract class Vehicle implements IDispay {
         this.model = model;
     }
 
-    public LocalDate getInsuranceDate() {
+    public LocalDateTime getInsuranceDate() {
         return insuranceDate;
     }
 
-    public void setInsuranceDate(LocalDate insuranceDate) {
+    public void setInsuranceDate(LocalDateTime insuranceDate) {
         this.insuranceDate = insuranceDate;
     }
 
