@@ -26,7 +26,7 @@ public class NitinMain {
 
         LocalDate insuranceDate4 = LocalDate.parse("2018-12-04");
         MotorCycle mC4 = new MotorCycle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate4, 23.0f, 26000.00f, 1, "petrol");
-        mC4.printMyData();
+        mC4.printMyData(); //
 
 
 
