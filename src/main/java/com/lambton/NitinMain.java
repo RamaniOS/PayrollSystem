@@ -40,6 +40,14 @@ public class NitinMain {
         MotorCycle mC7 = new MotorCycle("motorcycle", "Hondai", "IOP23W0", "Sports", insuranceDate7, 23.0f, 66000.00f, 1, "petrol");
         mC7.printMyData();
 
+        LocalDate insuranceDate8 = LocalDate.parse("2018-12-17");
+        MotorCycle mC8 = new MotorCycle("motorcycle", "Hondai", "IYP23W0", "Sports", insuranceDate7, 23.0f, 66000.00f, 1, "petrol");
+        mC8.printMyData();
+
+        LocalDate insuranceDate9 = LocalDate.parse("2018-12-18");
+        MotorCycle mC9 = new MotorCycle("motorcycle", "Hondai", "IYP23W0", "Sports", insuranceDate7, 23.0f, 66000.00f, 1, "petrol");
+        mC9.printMyData();
+
 
 
 
