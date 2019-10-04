@@ -53,8 +53,13 @@ public class Car extends Vehicle {
 
     /** Helper Method*/
     @Override
-    public float calculateInsuranceStatus() {
+    public String calculateInsuranceStatus() {
 
-        return 0;
+        return "";
+    }
+
+    @Override
+    public void printMyData() {
+
     }
 }

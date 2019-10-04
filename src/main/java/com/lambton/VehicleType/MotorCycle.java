@@ -64,8 +64,13 @@ public class MotorCycle extends Vehicle{
 
     /** Helper */
     @Override
-    public float calculateInsuranceStatus() {
-        return 0;
+    public String calculateInsuranceStatus() {
+        return "";
+    }
+
+    @Override
+    public void printMyData() {
+
     }
 
 
