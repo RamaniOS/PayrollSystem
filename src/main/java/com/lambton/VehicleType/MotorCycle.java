@@ -3,11 +3,14 @@ Created by: Nitin Jaswal
  */
 package com.lambton.VehicleType;
 
+import com.lambton.Other.CalculateInsuranceStat;
 import com.lambton.Vehicle.Vehicle;
 
 import java.time.LocalDate;
 
 public class MotorCycle extends Vehicle{
+
+    //-----------------------------------------------------------------------
     public enum FuelType {
         petrol, diesel, gas
     }
@@ -18,6 +21,7 @@ public class MotorCycle extends Vehicle{
     protected int seater;
     protected FuelType fuelType;
 
+    //-----------------------------------------------------------------------
     /** Getter - Setter*/
     @Override
     public VehicleType getVehicleType() {
@@ -53,6 +57,7 @@ public class MotorCycle extends Vehicle{
         this.fuelType = fuelType;
     }
 
+    //-----------------------------------------------------------------------
     /** Constructor*/
     public MotorCycle(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType, VehicleType vehicleType1, float price, int seater, FuelType fuelType) {
         super(manufacturer, plateNo, model, insuranceDate, milage, vehicleType);
@@ -62,10 +67,19 @@ public class MotorCycle extends Vehicle{
         this.fuelType = fuelType;
     }
 
+    //-----------------------------------------------------------------------
     /** Helper */
     @Override
     public String calculateInsuranceStatus() {
-        return "";
+        // get the insurance date from Vehicle class getter method.
+        LocalDate insurDate = getInsuranceDate();
+
+        // use common public method to calculate the insurace status.
+        CalculateInsuranceStat obj = new CalculateInsuranceStat();
+        // call method.
+        String strRemainingDuration = obj.calculateInsuranceStatusOfVehicle(insurDate);
+
+        return strRemainingDuration;
     }
 
     @Override

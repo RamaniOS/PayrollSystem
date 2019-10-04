@@ -3,15 +3,17 @@ Created by: Nitin Jaswal
  */
 package com.lambton.VehicleType;
 
+import com.lambton.Other.CalculateInsuranceStat;
 import com.lambton.Vehicle.Vehicle;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.temporal.ChronoUnit;
 
 /// This is the Car class inherited from parent class 'Vehicle', containing the information of vehicle type car.
 public class Car extends Vehicle {
 
+    //-----------------------------------------------------------------------
     public enum FuelType {
         petrol, diesel, gas, Tesla
     }
@@ -20,6 +22,7 @@ public class Car extends Vehicle {
     protected int seater;
     protected FuelType fuelType;
 
+    //-----------------------------------------------------------------------
     /** Constructor*/
     public Car(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType, float price, int seater, FuelType fuelType) {
         super(manufacturer, plateNo, model, insuranceDate, milage, vehicleType);
@@ -28,6 +31,7 @@ public class Car extends Vehicle {
         this.fuelType = fuelType;
     }
 
+    //-----------------------------------------------------------------------
     /** Getter - Setter*/
     public float getPrice() {
         return price;
@@ -53,27 +57,20 @@ public class Car extends Vehicle {
         this.fuelType = fuelType;
     }
 
+    //-----------------------------------------------------------------------
     /** Helper Method*/
     @Override
     public String calculateInsuranceStatus() {
 
-        //LocalDateTime from = getInsuranceDate();
-        LocalDate from = LocalDate.parse("2019-06-21");
-//
-        LocalDate to = LocalDate.parse("2019-08-21");
+        // get the insurance date from Vehicle class getter method.
+        LocalDate insurDate = getInsuranceDate();
 
-        LocalDate fromTemp = LocalDate.from(from);
-        // diff years
-        long years = fromTemp.until(to, ChronoUnit.YEARS);
+        // use common public method to calculate the insurace status.
+        CalculateInsuranceStat obj = new CalculateInsuranceStat();
+        // call method.
+        String strRemainingDuration = obj.calculateInsuranceStatusOfVehicle(insurDate);
 
-        // fromTemp = fromTemp.plusYears(years);
-
-        long months = fromTemp.until(to, ChronoUnit.MONTHS);
-        // fromTemp = fromTemp.plusMonths(months);
-
-        long days = fromTemp.until(to, ChronoUnit.DAYS);
-
-        return "";
+        return strRemainingDuration;
     }
 
     @Override

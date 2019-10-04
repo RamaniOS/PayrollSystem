@@ -7,12 +7,13 @@ package com.lambton.Vehicle;
 import com.lambton.Other.IDispay;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 
 /// This is the Vehicle class, containing the information of Employee's Vehicle.
 public abstract class Vehicle implements IDispay {
 
+    //-----------------------------------------------------------------------
     public enum VehicleType {
         car, motorcycle
     }
@@ -21,12 +22,13 @@ public abstract class Vehicle implements IDispay {
     protected String manufacturer;
     protected String plateNo;
     protected String model;
-    protected LocalDateTime insuranceDate;
+    protected LocalDate insuranceDate;
     protected float milage;
     protected VehicleType vehicleType;
 
+    //-----------------------------------------------------------------------
     /** Constructor*/
-    public Vehicle(String manufacturer, String plateNo, String model, LocalDateTime insuranceDate, float milage, VehicleType vehicleType) {
+    public Vehicle(String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage, VehicleType vehicleType) {
         this.manufacturer = manufacturer;
         this.plateNo = plateNo;
         this.model = model;
@@ -35,6 +37,7 @@ public abstract class Vehicle implements IDispay {
         this.vehicleType = vehicleType;
     }
 
+    //-----------------------------------------------------------------------
     /** Getter - Setter*/
     public String getManufacturer() {
         return manufacturer;
@@ -60,11 +63,11 @@ public abstract class Vehicle implements IDispay {
         this.model = model;
     }
 
-    public LocalDateTime getInsuranceDate() {
+    public LocalDate getInsuranceDate() {
         return insuranceDate;
     }
 
-    public void setInsuranceDate(LocalDateTime insuranceDate) {
+    public void setInsuranceDate(LocalDate insuranceDate) {
         this.insuranceDate = insuranceDate;
     }
 
@@ -84,6 +87,7 @@ public abstract class Vehicle implements IDispay {
         this.vehicleType = vehicleType;
     }
 
+    //-----------------------------------------------------------------------
     /** Helper methods*/
     // this is the method to detect if vehicle gives good/low/average
     public String statusOfMilage(Float milage){
