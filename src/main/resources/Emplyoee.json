@@ -1,0 +1,55 @@
+[{
+  "id": 1,
+  "name": "Ramanpreet Singh",
+  "age": 23,
+  "schoolName": "Lambton College",
+  "type": "Intern",
+  "vehicle": null
+},
+  {
+    "id": 2,
+    "name": "Nitin Jaswal",
+    "age": 25,
+    "rate": 30.0,
+    "hoursWorked": 10,
+    "fixedAmount": 40.0,
+    "type": "PartTime / Fixed Amount",
+    "vehicle": {
+      "id": 1,
+      "manufacturer": "Tata Motors",
+      "plateNo": "777",
+      "model": "Jaguar Land Rover",
+      "insuranceDate": "2019-05-03",
+      "mileage": 2.8,
+      "details": {
+        "vehicleType": "car",
+        "price": 15550.20,
+        "fuelType": "Diesel",
+        "noOfSeats": 4
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "kiranjeet Kaur",
+    "age": 22,
+    "rate": 30.0,
+    "hoursWorked": 10,
+    "commissionPercentage": 20,
+    "type": "PartTime / Commissioned",
+    "vehicle": {
+      "id": 1,
+      "manufacturer": "Royal Enfield",
+      "plateNo": "O 455",
+      "model": "Classic 350",
+      "insuranceDate": "2018-08-20",
+      "mileage": 11.2,
+      "details": {
+        "vehicleType": "Motorcycle",
+        "price": 1100.30,
+        "fuelType": "Petrol",
+        "noOfSeats": 1
+      }
+    }
+  }
+]
