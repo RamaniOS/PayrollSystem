@@ -1,6 +1,6 @@
 package com.lambton.MISC;
 
-//Created by Ramanpreet Singh
+//Created by Ramanpreet Singh and Nitin Jaswal
 public class NameLengthException extends Exception {
 
     private String message;
@@ -11,3 +11,4 @@ public class NameLengthException extends Exception {
         this.message = message;
     }
 }
+
