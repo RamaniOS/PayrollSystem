@@ -3,6 +3,7 @@ package com.lambton.Employee;
 import com.lambton.MISC.IPrintable;
 import com.lambton.Vehicle.Vehicle;
 import com.lambton.VehicleType.Car;
+import com.lambton.VehicleType.MotorCycle;
 
 import java.time.LocalDate;
 
@@ -13,7 +14,9 @@ public abstract class EmployeeClass implements IPrintable {
     private String name;
     private int age;
     float EARNING = 1000.0f;
-    public Vehicle vehicle;
+
+    public Car car;
+    public MotorCycle motorcycle;
 
     //Constructor
     public EmployeeClass() {
@@ -62,19 +65,20 @@ public abstract class EmployeeClass implements IPrintable {
     public abstract void printMyData();
 
     public void getVehicleDetails() {
-        if (vehicle != null) {
-            if (vehicle.getVehicleType().equalsIgnoreCase("car")) {
-                System.out.println("Employee has a Car");
-            } else if (vehicle.getVehicleType().equalsIgnoreCase("Motorcycle")) {
-                System.out.println("Employee has a Motorcycle");
+        if (car != null) {
+            //
+            if (car.getVehicleType().equalsIgnoreCase("car")) {
+                // call method...
+                car.printMyDisplay();
             }
-            System.out.println("Make:" + " " + vehicle.getManufacturer());
-            System.out.println("Plate:" + " " + vehicle.getPlateNo());
-            System.out.println("Model:" + " " + vehicle.getModel());
-            System.out.println("InsuranceDate:" + " " + vehicle.getInsuranceDate());
-            System.out.println("Milage:" + " " + vehicle.getMilage());
-        } else {
-            System.out.println("Employee has no Vehicle registered");
+        } else if(motorcycle != null){
+            //
+            if (motorcycle.getVehicleType().equalsIgnoreCase("Motorcycle")) {
+                // call method...
+                motorcycle.printMyDisplay();
+            }
+        }else {
+            System.out.println("Employee has no vehicle");
         }
     }
 }

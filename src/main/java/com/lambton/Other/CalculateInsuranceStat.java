@@ -19,6 +19,14 @@ public class CalculateInsuranceStat {
         LocalDate from = LocalDate.now();
         LocalDate to;
 
+        // check if date exceed the currentdate.
+        try {
+            if (insurDate.isAfter(from)) throw new DateException("Date must not exceed the currentdate");
+
+        } catch (DateException e)  {
+            System.out.println("Wrong date:" + " " + e);
+        }
+
         int lastInsuranceYear = insurDate.getYear();
         int currentYear = LocalDate.now().getYear();
 

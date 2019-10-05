@@ -6,6 +6,8 @@ package com.lambton.VehicleType;
 import com.lambton.Other.CalculateInsuranceStat;
 import com.lambton.Vehicle.Vehicle;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 
 /// This is the Car class inherited from parent class 'Vehicle', containing the information of vehicle type car.
@@ -56,8 +58,8 @@ public class Car extends Vehicle {
     }
 
     //-----------------------------------------------------------------------
- /*   /** Helper Method*/
-  /*  @Override
+    /*   /** Helper Method*/
+
     public String calculateInsuranceStatus() {
 
         // get the insurance date from Vehicle class getter method.
@@ -69,11 +71,10 @@ public class Car extends Vehicle {
         String strRemainingDuration = obj.calculateInsuranceStatusOfVehicle(insurDate);
 
         return strRemainingDuration;
-    }*/
+    }
 
-  /*  @Override
-    public void printMyData() {
 
+    public void printMyDisplay() {
 
         String vehicleType = getVehicleType();
         if(vehicleType == "N/A"){
@@ -82,7 +83,8 @@ public class Car extends Vehicle {
             vehicleType = vehicleType.substring(0,1).toUpperCase() + vehicleType.substring(1).toLowerCase();
             System.out.println("Employee has a" + " " + vehicleType);//
             System.out.println("    - Manufacturer:" + " " + getManufacturer());//
-            System.out.println("    - Price:" + " $" + this.price);
+            NumberFormat formatter = new DecimalFormat("###,###,###.##");
+            System.out.println("    - Price:" + " $" + formatter.format(this.price));
             System.out.println("    - Seater:" + " " + this.seater);
             System.out.println("    - Fuel Type:" + " " + this.fuelType);
             System.out.println("    - Plate No.:" + " " + getPlateNo());//
@@ -94,5 +96,5 @@ public class Car extends Vehicle {
             System.out.println("    - Milage Status:" + " " + super.statusOfMilage(milage));
         }
 
-    }*/
+    }
 }
