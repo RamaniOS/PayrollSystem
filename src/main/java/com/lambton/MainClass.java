@@ -74,6 +74,13 @@ public class MainClass {
 
         System.out.println("*-------------------------------------------------------------------------*");
 
+        EmployeeClass fP6 = new FixedBasedPartTimeEmployee("Jyhn", 24, 30.0f, 10, 40.0f);
+        fP6.printMyData();
+        MotorCycle mC6 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC6.printMyDisplay();
+
+        System.out.println("*-------------------------------------------------------------------------*");
+
         float total = (i.calculateEarning() + cP.calculateEarning() + fP.calculateEarning() + fE.calculateEarning());
         System.out.println("TOTAL PAYROLL:" + " " + total + " " + "Canadian Dollars");
     }
