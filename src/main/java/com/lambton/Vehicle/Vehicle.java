@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 
 /// This is the Vehicle class, containing the information of Employee's Vehicle.
-public  class Vehicle implements IDispay {
+public abstract class Vehicle implements IDispay {
 
     //-----------------------------------------------------------------------
 //    public enum VehicleType {
@@ -118,16 +118,13 @@ public  class Vehicle implements IDispay {
 
     }
 
-    @Override
-    public void printMyDisplay() {
 
-    }
 
     // this is an undefined method to get the insurance status of the vehicle.
     // public abstract String calculateInsuranceStatus();
 
 
-    // public abstract void printMyDisplay();
+     public abstract void printMyDisplay();
 
 
 
