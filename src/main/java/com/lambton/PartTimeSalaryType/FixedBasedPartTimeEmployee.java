@@ -35,7 +35,12 @@ public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
 
     @Override
     public void printMyData() {
+
         super.printMyData();
+
+        // call method to get vehicle detail
+        super.getVehicleDetails();
+
         System.out.println("Employee is PartTime / Fixed Amt");
         System.out.println("    - Rate:" + " $" + getRate());
         System.out.println("    - HoursWorked:" + " " + getHoursWorked());
@@ -43,6 +48,5 @@ public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
         System.out.println("    - Earnings:" + " $" + calculateEarning());
 
 
-        //super.getVehicleDetails();
     }
 }

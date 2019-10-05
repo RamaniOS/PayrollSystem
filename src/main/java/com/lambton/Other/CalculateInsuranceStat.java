@@ -55,10 +55,10 @@ public class CalculateInsuranceStat {
 
                 // 3. check difference of days.
                 if((currentDay - insuranceDay) > 0){
-                    to = LocalDate.parse(insuranceDate);
-                }else if((currentDay - insuranceDay) < 0){
                     //to = LocalDate.parse(insuranceDate);
                     return "Your insurance has crossed the expiry date, please contact to the insurance agency. :(";
+                }else if((currentDay - insuranceDay) < 0){
+                    to = LocalDate.parse(insuranceDate);
                 }else{
                     //to = LocalDate.parse(insuranceDate);
                     return "Your insurance has crossed the expiry date, please contact to the insurance agency. :(";

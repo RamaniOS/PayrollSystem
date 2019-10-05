@@ -71,9 +71,10 @@ public abstract class EmployeeClass implements IPrintable {
                 // call method...
                 car.printMyDisplay();
             }
+
         } else if(motorcycle != null){
             //
-            if (motorcycle.getVehicleType().equalsIgnoreCase("Motorcycle")) {
+            if (motorcycle.getVehicleType().equalsIgnoreCase("motorcycle")) {
                 // call method...
                 motorcycle.printMyDisplay();
             }
