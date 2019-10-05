@@ -65,6 +65,7 @@ public abstract class EmployeeClass implements IPrintable {
     public abstract void printMyData();
 
     public void getVehicleDetails() {
+
         if (car != null) {
             //
             if (car.getVehicleType().equalsIgnoreCase("car")) {
@@ -73,12 +74,15 @@ public abstract class EmployeeClass implements IPrintable {
             }
 
         } else if(motorcycle != null){
+
             //
             if (motorcycle.getVehicleType().equalsIgnoreCase("motorcycle")) {
+
                 // call method...
                 motorcycle.printMyDisplay();
             }
         }else {
+
             System.out.println("Employee has no vehicle");
         }
     }
