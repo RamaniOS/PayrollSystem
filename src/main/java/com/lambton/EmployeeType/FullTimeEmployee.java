@@ -1,6 +1,7 @@
 package com.lambton.EmployeeType;
 
 import com.lambton.Employee.EmployeeClass;
+import com.lambton.MISC.NameLengthException;
 
 //Created by Ramanpreet Singh
 public class FullTimeEmployee extends EmployeeClass {
@@ -43,7 +44,12 @@ public class FullTimeEmployee extends EmployeeClass {
 
     @Override
     public void printMyData() {
-        System.out.println("Name:" + " " + getName());
+        try {
+            if (getName().length() < 5) throw new NameLengthException("Name must have more than 5 chars");
+            else System.out.println("Name:" + " " + getName());
+        } catch (NameLengthException e)  {
+            System.out.println("Something happens wrong" + " " + e);
+        }
         System.out.println("Year of Birth:" + " " + getBirthYear());
         System.out.println("Employee is FullTime");
         System.out.println("    - Salary:" + " $" + this.salary);
