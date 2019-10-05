@@ -21,29 +21,29 @@ public class MainClass {
     {
         System.out.println("*-------------------------------------------------------------------------*");
         LocalDate insuranceDate = LocalDate.parse("2018-12-03");
-        FullTimeEmployee fE = new FullTimeEmployee("Niti", 26, 32000, 800);
-        fE.vehicle = new Vehicle("car", "Tyota", "YDO123", "Classic", insuranceDate, 12.0f);
-        fE.printMyData();
+        FullTimeEmployee fullTimeEmployee = new FullTimeEmployee("Nitin", 26, 32000, 800);
+        fullTimeEmployee.vehicle = new Vehicle("car", "Tyota", "YDO123", "Classic", insuranceDate, 12.0f);
+        fullTimeEmployee.printMyData();
         System.out.println("*-------------------------------------------------------------------------*");
 
-        InternEmployee i = new InternEmployee("Ramanpreet",  25, "Lambton College");
-        i.printMyData();
+        InternEmployee internEmployee = new InternEmployee("Ramanpreet",  25, "Lambton College");
+        internEmployee.printMyData();
         System.out.println("*-------------------------------------------------------------------------*");
 
         LocalDate insuranceDate1 = LocalDate.parse("2016-12-03");
         Car ca1 = new Car("car", "Sonata", "PER343", "Sports", insuranceDate1 , 23.50f, 39000.00f, 2, "petrol");
-        EmployeeClass cp = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
-        cp.vehicle = new Vehicle("car", "Dodge", "Dollar01", "Charger", insuranceDate1, 15.0f);
-        cp.printMyData();
+        EmployeeClass commissionBasedPartTimeEmployee = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
+        commissionBasedPartTimeEmployee.vehicle = new Vehicle("car", "Dodge", "Dollar01", "Charger", insuranceDate1, 15.0f);
+        commissionBasedPartTimeEmployee.printMyData();
         System.out.println("*-------------------------------------------------------------------------*");
 
         LocalDate insuranceDate2 = LocalDate.parse("2019-02-01");
-        EmployeeClass fp = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
-        fp.vehicle = new Vehicle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate1, 23.0f);
-        fp.printMyData();
+        EmployeeClass fixedBasedPartTimeEmployee = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
+        fixedBasedPartTimeEmployee.vehicle = new Vehicle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate1, 23.0f);
+        fixedBasedPartTimeEmployee.printMyData();
         System.out.println("*-------------------------------------------------------------------------*");
 
-        float total = (i.calculateEarning() + cp.calculateEarning() + fp.calculateEarning() + fE.calculateEarning());
+        float total = (fixedBasedPartTimeEmployee.calculateEarning() + fullTimeEmployee.calculateEarning() + internEmployee.calculateEarning() + commissionBasedPartTimeEmployee.calculateEarning());
         DecimalFormat formatter = new DecimalFormat("#,###");
         System.out.println("TOTAL PAYROLL:" + " " + formatter.format(total) + " " + "Canadian Dollars");
     }
