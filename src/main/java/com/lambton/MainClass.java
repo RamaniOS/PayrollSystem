@@ -30,20 +30,34 @@ public class MainClass {
         Car ca1 = new Car("car", "Sonata", "PER343", "Sports", insuranceDate1 , 23.50f, 39000.00f, 2, "petrol");
         ca1.printMyDisplay();
 
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("*-------------------------------------------------------------------------*");
         EmployeeClass cP = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
         cP.printMyData();
         LocalDate insuranceDate2 = LocalDate.parse("2019-02-01");
         MotorCycle mC = new MotorCycle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate1, 23.0f, 26000.00f, 1, "petrol");
         mC.printMyDisplay();
 
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("*-------------------------------------------------------------------------*");
         EmployeeClass fP = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
         fP.printMyData();
         MotorCycle mC1 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
         mC1.printMyDisplay();
 
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("*-------------------------------------------------------------------------*");
+
+        EmployeeClass fP2 = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
+        fP2.printMyData();
+        MotorCycle mC2 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC2.printMyDisplay();
+
+        System.out.println("*-------------------------------------------------------------------------*");
+
+        EmployeeClass fP3 = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
+        fP3.printMyData();
+        MotorCycle mC3 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC3.printMyDisplay();
+
+        System.out.println("*-------------------------------------------------------------------------*");
 
         float total = (i.calculateEarning() + cP.calculateEarning() + fP.calculateEarning() + fE.calculateEarning());
         System.out.println("TOTAL PAYROLL:" + " " + total + " " + "Canadian Dollars");
