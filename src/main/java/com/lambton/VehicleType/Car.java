@@ -74,6 +74,7 @@ public class Car extends Vehicle {
   /*  @Override
     public void printMyData() {
 
+
         String vehicleType = getVehicleType();
         if(vehicleType == "N/A"){
             System.out.println("Employee has no Vehicle");//
