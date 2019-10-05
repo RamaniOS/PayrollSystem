@@ -28,10 +28,6 @@ public class FullTimeEmployee extends EmployeeClass {
         this.bonus = bonus;
     }
 
-    public FullTimeEmployee()
-    {
-    }
-
     public FullTimeEmployee(String name, int age, float salary, float bonus)
     {
         super(name, age);
@@ -47,7 +43,13 @@ public class FullTimeEmployee extends EmployeeClass {
 
     @Override
     public void printMyData() {
+
         System.out.println("Name:" + " " + getName());
         System.out.println("Year of Birth:" + " " + getBirthYear());
+        System.out.println("Employee is FullTime");
+        System.out.println("    - Salary:" + " $" + this.salary);
+        System.out.println("    - Bonus:" + " $" + this.bonus);
+        System.out.println("    - Earning:" + " $" + this.calculateEarning());
+
     }
 }
