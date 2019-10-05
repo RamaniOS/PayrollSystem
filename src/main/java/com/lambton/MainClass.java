@@ -61,13 +61,15 @@ public class MainClass {
 //
                 InternEmployee iE = new InternEmployee(obj.getString("name"),  obj.getInt("age"), obj.getString("schoolName"));
 
-                JSONObject objV = obj.getJSONObject("vehicle");
-                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+                if (!obj.isNull("vehicle")) {
+                    JSONObject objV = obj.getJSONObject("vehicle");
+                    LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
 
-                JSONObject objVDetal = objV.getJSONObject("details");
+                    JSONObject objVDetal = objV.getJSONObject("details");
 
-                iE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
-                iE.printMyData();
+                    iE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+                }
+                 iE.printMyData();
 
                 totalPayroll = totalPayroll + iE.calculateEarning();
 
@@ -128,20 +130,8 @@ public class MainClass {
                 "  \"age\": 25,\n" +
                 "  \"schoolName\": \"Lambton College\",\n" +
                 "  \"type\": \"Intern\",\n" +
-                "  \"vehicle\": {\n" +
-                "    \"id\": 1,\n" +
-                "    \"vehicleType\": \"car\",\n" +
-                "    \"manufacturer\": \"Ferrari\",\n" +
-                "    \"plateNo\": \"TRE477\",\n" +
-                "    \"model\": \"Sports\",\n" +
-                "    \"insuranceDate\": \"2018-11-05\",\n" +
-                "    \"mileage\": 9.8,\n" +
-                "    \"details\": {\n" +
-                "      \"price\": 45650.20,\n" +
-                "      \"fuelType\": \"Diesel\",\n" +
-                "      \"noOfSeats\": 2\n" +
-                "    }\n" +
-                "  }\n" +
+                "  \"vehicle\": null\n" +
+                "  \n" +
                 "},\n" +
                 "  {\n" +
                 "    \"id\": 2,\n" +
