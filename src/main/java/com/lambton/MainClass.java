@@ -26,15 +26,15 @@ public class MainClass {
     /** Main function*/
     public static void main(String[] args) {
         System.out.println("\n*** PAYROLL SYSTEM ***");
-        // get JSON String:
-        JSONObject exjObj = new JSONObject(getJsonString());
+            // get JSON String:
+            JSONObject exjObj = new JSONObject(getJsonString());
 
-        float totalPayroll = 0.0f;
+            float totalPayroll = 0.0f;
 
-        JSONArray arr =  exjObj.getJSONArray("JSON");
-        for (int i = 0; i < arr.length(); i++){
+            JSONArray arr =  exjObj.getJSONArray("JSON");
+            for (int i = 0; i < arr.length(); i++){
 
-            JSONObject obj = arr.getJSONObject(i);
+                JSONObject obj = arr.getJSONObject(i);
             String employeeType = obj.getString("type");
 
             if(employeeType.equals("FullTime")){
@@ -80,7 +80,7 @@ public class MainClass {
                 // 3.
                 System.out.println("*-------------------------------------------------------------------------*");
 
-                EmployeeClass cP = new CommissionBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("commissionPercentage"));
+                CommissionBasedPartTimeEmployee cP = new CommissionBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("commissionPercentage"));
 
                 if (!obj.isNull("vehicle")) {
                     JSONObject objV = obj.getJSONObject("vehicle");
@@ -100,7 +100,7 @@ public class MainClass {
                 // 4.
                 System.out.println("*-------------------------------------------------------------------------*");
 
-                EmployeeClass fP = new FixedBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("fixedAmount"));
+                FixedBasedPartTimeEmployee fP = new FixedBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("fixedAmount"));
 
                 if (!obj.isNull("vehicle")) {
                     JSONObject objV = obj.getJSONObject("vehicle");

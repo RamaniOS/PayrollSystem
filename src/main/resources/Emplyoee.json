@@ -4,20 +4,8 @@
   "age": 25,
   "schoolName": "Lambton College",
   "type": "Intern",
-  "vehicle": {
-    "id": 1,
-    "vehicleType": "car",
-    "manufacturer": "Ferrari",
-    "plateNo": "TRE477",
-    "model": "Sports",
-    "insuranceDate": "2018-11-05",
-    "mileage": 9.8,
-    "details": {
-      "price": 45650.20,
-      "fuelType": "Diesel",
-      "noOfSeats": 2
-    }
-  }
+  "vehicle": null
+
 },
   {
     "id": 2,

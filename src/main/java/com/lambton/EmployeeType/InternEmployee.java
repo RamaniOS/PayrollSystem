@@ -28,7 +28,6 @@ public class InternEmployee extends EmployeeClass {
         this.schoolName = schoolName;
     }
 
-    @Override
     public float calculateEarning()
     {
         return 1000.0f;

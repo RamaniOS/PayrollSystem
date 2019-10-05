@@ -60,7 +60,7 @@ public abstract class EmployeeClass implements IPrintable {
         return LocalDate.now().getYear() - getAge();
     }
 
-    public abstract float calculateEarning();
+
 
     public abstract void printMyData();
 
