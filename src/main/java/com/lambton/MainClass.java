@@ -45,6 +45,14 @@ public class MainClass {
 
         System.out.println("*-------------------------------------------------------------------------*");
 
+        EmployeeClass fP3 = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
+        fP3.printMyData();
+        MotorCycle mC3 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC3.printMyDisplay();
+
+        System.out.println("*-------------------------------------------------------------------------*");
+
+
         EmployeeClass fP2 = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
         fP2.printMyData();
         MotorCycle mC2 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
@@ -52,10 +60,10 @@ public class MainClass {
 
         System.out.println("*-------------------------------------------------------------------------*");
 
-        EmployeeClass fP3 = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
-        fP3.printMyData();
-        MotorCycle mC3 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
-        mC3.printMyDisplay();
+        EmployeeClass fP4 = new FixedBasedPartTimeEmployee("Jihn", 24, 30.0f, 10, 40.0f);
+        fP4.printMyData();
+        MotorCycle mC4 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC4.printMyDisplay();
 
         System.out.println("*-------------------------------------------------------------------------*");
 
