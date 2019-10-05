@@ -11,6 +11,7 @@ import com.lambton.Vehicle.Vehicle;
 import com.lambton.VehicleType.Car;
 import com.lambton.VehicleType.MotorCycle;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class MainClass {
@@ -43,6 +44,7 @@ public class MainClass {
         System.out.println("*-------------------------------------------------------------------------*");
 
         float total = (i.calculateEarning() + cp.calculateEarning() + fp.calculateEarning() + fE.calculateEarning());
-        System.out.println("TOTAL PAYROLL:" + " " + total + " " + "Canadian Dollars");
+        DecimalFormat formatter = new DecimalFormat("#,###");
+        System.out.println("TOTAL PAYROLL:" + " " + formatter.format(total) + " " + "Canadian Dollars");
     }
 }

@@ -2,6 +2,7 @@ package com.lambton.Employee;
 
 import com.lambton.MISC.IPrintable;
 import com.lambton.Vehicle.Vehicle;
+import com.lambton.VehicleType.Car;
 
 import java.time.LocalDate;
 
