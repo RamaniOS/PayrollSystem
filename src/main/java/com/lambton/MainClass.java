@@ -21,7 +21,7 @@ public class MainClass {
     {
         System.out.println("*-------------------------------------------------------------------------*");
         LocalDate insuranceDate = LocalDate.parse("2018-12-03");
-        FullTimeEmployee fE = new FullTimeEmployee("Nitin", 26, 32000, 800);
+        FullTimeEmployee fE = new FullTimeEmployee("Niti", 26, 32000, 800);
         fE.vehicle = new Vehicle("car", "Tyota", "YDO123", "Classic", insuranceDate, 12.0f);
         fE.printMyData();
         System.out.println("*-------------------------------------------------------------------------*");
