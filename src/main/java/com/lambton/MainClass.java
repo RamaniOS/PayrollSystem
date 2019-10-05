@@ -143,7 +143,7 @@ public class MainClass {
                 "    \"type\": \"PartTime / Fixed Amount\",\n" +
                 "    \"vehicle\": {\n" +
                 "      \"id\": 2,\n" +
-                "      \"vehicleType\": \"car\",\n" +
+                "      \"vehicleType\": \"motorcycle\",\n" +
                 "      \"manufacturer\": \"Tata Motors\",\n" +
                 "      \"plateNo\": \"PB777\",\n" +
                 "      \"model\": \"Jaguar Land Rover\",\n" +

@@ -75,7 +75,6 @@ public class MotorCycle extends Vehicle{
 
     public void printMyDisplay() {
 
-
         String vehicleType = getVehicleType();
 
         if(vehicleType == "N/A"){
