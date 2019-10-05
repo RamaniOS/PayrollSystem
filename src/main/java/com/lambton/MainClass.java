@@ -46,12 +46,16 @@ public class MainClass {
                 // https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php
                 FullTimeEmployee fE = new FullTimeEmployee(obj.getString("name"), obj.getInt("age"), obj.getFloat("salary"), obj.getInt("bonus"));
 
-                JSONObject objV = obj.getJSONObject("vehicle");
-                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+                if (!obj.isNull("vehicle")) {
+                    JSONObject objV = obj.getJSONObject("vehicle");
+                    LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
 
-                JSONObject objVDetal = objV.getJSONObject("details");
+                    JSONObject objVDetal = objV.getJSONObject("details");
 
-                fE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+                    fE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+
+                }
+
                 fE.printMyData();
                 totalPayroll = totalPayroll + fE.calculateEarning();
 
@@ -79,12 +83,16 @@ public class MainClass {
 
                 EmployeeClass cP = new CommissionBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("commissionPercentage"));
 
-                JSONObject objV = obj.getJSONObject("vehicle");
-                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+                if (!obj.isNull("vehicle")) {
+                    JSONObject objV = obj.getJSONObject("vehicle");
+                    LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
 
-                JSONObject objVDetal = objV.getJSONObject("details");
+                    JSONObject objVDetal = objV.getJSONObject("details");
 
-                cP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+                    cP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+
+                }
+
                 cP.printMyData();
 
                 totalPayroll = totalPayroll + cP.calculateEarning();
@@ -95,12 +103,16 @@ public class MainClass {
 
                 EmployeeClass fP = new FixedBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("fixedAmount"));
 
-                JSONObject objV = obj.getJSONObject("vehicle");
-                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+                if (!obj.isNull("vehicle")) {
+                    JSONObject objV = obj.getJSONObject("vehicle");
+                    LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
 
-                JSONObject objVDetal = objV.getJSONObject("details");
+                    JSONObject objVDetal = objV.getJSONObject("details");
 
-                fP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+                    fP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
+
+                }
+
                 fP.printMyData();
 
                 totalPayroll = totalPayroll + fP.calculateEarning();
