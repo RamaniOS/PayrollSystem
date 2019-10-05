@@ -74,17 +74,24 @@ public class Car extends Vehicle {
     @Override
     public void printMyData() {
 
-        System.out.println("//-----------------------------------------------------------------------");
-        System.out.println("Vehicle Type:" + " " + getVehicleType());//
-        System.out.println("Manufacturer:" + " " + getManufacturer());//
-        System.out.println("Plate No.:" + " " + getPlateNo());//
-        System.out.println("Model:" + " " + getModel());//
-        System.out.println("Insurance Date:" + " " + getInsuranceDate());//
-        System.out.println("Insurance Status:" + " " + calculateInsuranceStatus());
-        float milage = getMilage();
-        System.out.println("Milage:" + " " + milage);//
-        System.out.println("Milage Status:" + " " + super.statusOfMilage(milage));
-        System.out.println("//-----------------------------------------------------------------------");
+        String vehicleType = getVehicleType();
+        if(vehicleType == "N/A"){
+            System.out.println("Employee has no Vehicle");//
+        }else {
+            vehicleType = vehicleType.substring(0,1).toUpperCase() + vehicleType.substring(1).toLowerCase();
+            System.out.println("Employee has a" + " " + vehicleType);//
+            System.out.println("    - Manufacturer:" + " " + getManufacturer());//
+            System.out.println("    - Price:" + " $" + this.price);
+            System.out.println("    - Seater:" + " " + this.seater);
+            System.out.println("    - Fuel Type:" + " " + this.fuelType);
+            System.out.println("    - Plate No.:" + " " + getPlateNo());//
+            System.out.println("    - Model:" + " " + getModel());//
+            System.out.println("    - Insurance Date:" + " " + getInsuranceDate());//
+            System.out.println("    - Insurance Status:" + " " + calculateInsuranceStatus());
+            float milage = getMilage();
+            System.out.println("    - Milage:" + " " + milage + " km/hr");//
+            System.out.println("    - Milage Status:" + " " + super.statusOfMilage(milage));
+        }
 
     }
 }
