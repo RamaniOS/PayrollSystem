@@ -5,6 +5,7 @@ package com.lambton;
 import com.lambton.Employee.EmployeeClass;
 import com.lambton.EmployeeType.FullTimeEmployee;
 import com.lambton.EmployeeType.InternEmployee;
+import com.lambton.MISC.Logger;
 import com.lambton.PartTimeSalaryType.CommissionBasedPartTimeEmployee;
 import com.lambton.PartTimeSalaryType.FixedBasedPartTimeEmployee;
 import com.lambton.VehicleType.Car;
@@ -13,7 +14,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
@@ -21,8 +25,7 @@ import java.time.LocalDate;
 public class MainClass {
 
     /** Main function*/
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         System.out.println("\n*** PAYROLL SYSTEM ***");
         // get JSON String:
         JSONObject exjObj = new JSONObject(getJsonString());
@@ -50,7 +53,6 @@ public class MainClass {
 
                 fE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 fE.printMyData();
-
                 totalPayroll = totalPayroll + fE.calculateEarning();
 
             }else if(employeeType.equals("Intern")){
@@ -107,8 +109,11 @@ public class MainClass {
         System.out.println("*-------------------------------------------------------------------------*");
 
         NumberFormat formatter = new DecimalFormat("###,###,###.##");
-        System.out.println("TOTAL PAYROLL:" + " " + formatter.format(totalPayroll) + " " + "Canadian Dollars");
+        String total = "TOTAL PAYROLL:" + " " + formatter.format(totalPayroll) + " " + "Canadian Dollars";
+        System.out.println(total);
+        Logger.log(total);
     }
+
 
     public static String getJsonString(){
         String str = "{\n" +
