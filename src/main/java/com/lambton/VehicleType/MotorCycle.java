@@ -57,7 +57,7 @@ public class MotorCycle extends Vehicle{
 
     //-----------------------------------------------------------------------
     /** Helper */
-    @Override
+ /*   @Override
     public String calculateInsuranceStatus() {
         // get the insurance date from Vehicle class getter method.
         LocalDate insurDate = getInsuranceDate();
@@ -95,6 +95,6 @@ public class MotorCycle extends Vehicle{
         }
 
     }
-
+*/
 
 }

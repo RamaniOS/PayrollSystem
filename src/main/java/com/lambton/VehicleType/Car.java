@@ -56,8 +56,8 @@ public class Car extends Vehicle {
     }
 
     //-----------------------------------------------------------------------
-    /** Helper Method*/
-    @Override
+ /*   /** Helper Method*/
+  /*  @Override
     public String calculateInsuranceStatus() {
 
         // get the insurance date from Vehicle class getter method.
@@ -69,10 +69,11 @@ public class Car extends Vehicle {
         String strRemainingDuration = obj.calculateInsuranceStatusOfVehicle(insurDate);
 
         return strRemainingDuration;
-    }
+    }*/
 
-    @Override
-    public void printMyDisplay() {
+  /*  @Override
+    public void printMyData() {
+
 
         String vehicleType = getVehicleType();
         if(vehicleType == "N/A"){
@@ -93,5 +94,5 @@ public class Car extends Vehicle {
             System.out.println("    - Milage Status:" + " " + super.statusOfMilage(milage));
         }
 
-    }
+    }*/
 }

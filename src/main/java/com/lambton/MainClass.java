@@ -7,6 +7,7 @@ import com.lambton.EmployeeType.FullTimeEmployee;
 import com.lambton.EmployeeType.InternEmployee;
 import com.lambton.PartTimeSalaryType.CommissionBasedPartTimeEmployee;
 import com.lambton.PartTimeSalaryType.FixedBasedPartTimeEmployee;
+import com.lambton.Vehicle.Vehicle;
 import com.lambton.VehicleType.Car;
 import com.lambton.VehicleType.MotorCycle;
 import org.json.JSONArray;
@@ -20,6 +21,7 @@ public class MainClass {
     public static void main(String[] args)
     {
 
+
         JSONObject exjObj = new JSONObject(getJsonString());
         JSONArray arr =  exjObj.getJSONArray("JSON");
         for (int i = 0; i < arr.length(); i++){
@@ -27,31 +29,49 @@ public class MainClass {
         }
 
         System.out.println("*-------------------------------------------------------------------------*");
+
+        LocalDate insuranceDate = LocalDate.parse("2018-12-03");
+        System.out.println("-------------------------------------------------------------------------");
+
         FullTimeEmployee fE = new FullTimeEmployee("Nitin", 26, 32000, 800);
+        fE.vehicle = new Vehicle("car", "Tyota", "YDO123", "Classic", insuranceDate, 12.0f);
+
         fE.printMyData();
-        LocalDate insuranceDate = LocalDate.parse("2018-11-03");
-        Car ca = new Car("car", "Tyota", "YDO123", "Classic", insuranceDate , 13.50f, 33000.00f, 4, "diesel");
-        ca.printMyDisplay();
+
+
+
+        FullTimeEmployee fE1 = new FullTimeEmployee("wsee", 26, 32000, 800);
+        fE1.vehicle = new Vehicle("Motorcycle", "dsad", "YDO123", "Classic", insuranceDate, 12.0f);
+
+        fE1.printMyData();
+
 
         System.out.println("*-------------------------------------------------------------------------*");
         InternEmployee i = new InternEmployee("Ramanpreet",  25, "Lambton College");
         i.printMyData();
         LocalDate insuranceDate1 = LocalDate.parse("2016-12-03");
         Car ca1 = new Car("car", "Sonata", "PER343", "Sports", insuranceDate1 , 23.50f, 39000.00f, 2, "petrol");
-        ca1.printMyDisplay();
+
 
         System.out.println("*-------------------------------------------------------------------------*");
         EmployeeClass cP = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
         cP.printMyData();
-        LocalDate insuranceDate2 = LocalDate.parse("2018-12-01");
-        MotorCycle mC = new MotorCycle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate2, 23.0f, 26000.00f, 1, "petrol");
-        mC.printMyDisplay();
+
+        LocalDate insuranceDate2 = LocalDate.parse("2019-02-01");
+        MotorCycle mC = new MotorCycle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate1, 23.0f, 26000.00f, 1, "petrol");
+        //mC.printMyData();
+
 
         System.out.println("*-------------------------------------------------------------------------*");
         EmployeeClass fP = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
         fP.printMyData();
-        MotorCycle mC1 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
-        mC1.printMyDisplay();
+
+        LocalDate insuranceDate3 = LocalDate.parse("2018-10-01");
+        MotorCycle mC1 = new MotorCycle("N/A", "Honda", "IOP23W", "Sports", insuranceDate1, 23.0f, 26000.00f, 1, "petrol");
+        //mC1.printMyData();
+
+        System.out.println("-------------------------------------------------------------------------");
+
 
         System.out.println("*-------------------------------------------------------------------------*");
         float total = (i.calculateEarning() + cP.calculateEarning() + fP.calculateEarning() + fE.calculateEarning());
