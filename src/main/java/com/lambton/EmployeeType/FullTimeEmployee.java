@@ -36,7 +36,7 @@ public class FullTimeEmployee extends EmployeeClass {
         this.bonus = bonus;
     }
 
-    @Override
+
     public float calculateEarning()
     {
         return getSalary() + getBonus();

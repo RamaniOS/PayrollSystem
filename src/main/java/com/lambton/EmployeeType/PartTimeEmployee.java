@@ -40,6 +40,8 @@ public abstract class PartTimeEmployee extends EmployeeClass {
         this.hoursWorked = hoursWorked;
     }
 
+    public abstract float calculateEarning();
+
     @Override
     public void printMyData() {
         try {
