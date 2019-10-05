@@ -155,15 +155,15 @@ public class MainClass {
                 "    \"vehicle\": {\n" +
                 "      \"id\": 2,\n" +
                 "      \"vehicleType\": \"motorcycle\",\n" +
-                "      \"manufacturer\": \"Tata Motors\",\n" +
+                "      \"manufacturer\": \"Bajaj\",\n" +
                 "      \"plateNo\": \"PB777\",\n" +
-                "      \"model\": \"Jaguar Land Rover\",\n" +
+                "      \"model\": \"Pulser220\",\n" +
                 "      \"insuranceDate\": \"2018-12-03\",\n" +
-                "      \"mileage\": 12.8,\n" +
+                "      \"mileage\": 32.8,\n" +
                 "      \"details\": {\n" +
-                "        \"price\": 25650.20,\n" +
-                "        \"fuelType\": \"Diesel\",\n" +
-                "        \"noOfSeats\": 3\n" +
+                "        \"price\": 15650.20,\n" +
+                "        \"fuelType\": \"Petrol\",\n" +
+                "        \"noOfSeats\": 2\n" +
                 "      }\n" +
                 "    }\n" +
                 "  },\n" +
@@ -200,7 +200,7 @@ public class MainClass {
                 "    \"vehicle\": {\n" +
                 "      \"id\": 4,\n" +
                 "      \"vehicleType\": \"car\",\n" +
-                "      \"manufacturer\": \"Majda\",\n" +
+                "      \"manufacturer\": \"Mazda\",\n" +
                 "      \"plateNo\": \"UP777\",\n" +
                 "      \"model\": \"Sports\",\n" +
                 "      \"insuranceDate\": \"2019-02-01\",\n" +
