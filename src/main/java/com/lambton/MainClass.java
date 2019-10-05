@@ -23,7 +23,7 @@ public class MainClass {
     /** Main function*/
     public static void main(String[] args)
     {
-        // get JSON:
+        // get JSON String:
         JSONObject exjObj = new JSONObject(getJsonString());
 
         JSONArray arr =  exjObj.getJSONArray("JSON");
