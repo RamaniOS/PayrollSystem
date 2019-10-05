@@ -4,7 +4,20 @@
   "age": 25,
   "schoolName": "Lambton College",
   "type": "Intern",
-  "vehicle": "N/A"
+  "vehicle": {
+    "id": 1,
+    "vehicleType": "car",
+    "manufacturer": "Ferrari",
+    "plateNo": "TRE477",
+    "model": "Sports",
+    "insuranceDate": "2018-11-05",
+    "mileage": 9.8,
+    "details": {
+      "price": 45650.20,
+      "fuelType": "Diesel",
+      "noOfSeats": 2
+    }
+  }
 },
   {
     "id": 2,
@@ -15,12 +28,12 @@
     "fixedAmount": 40.0,
     "type": "PartTime / Fixed Amount",
     "vehicle": {
-      "id": 1,
+      "id": 2,
       "vehicleType": "car",
       "manufacturer": "Tata Motors",
       "plateNo": "PB777",
       "model": "Jaguar Land Rover",
-      "insuranceDate": "22018-12-03",
+      "insuranceDate": "2018-12-03",
       "mileage": 12.8,
       "details": {
         "price": 25650.20,
@@ -38,7 +51,7 @@
     "commissionPercentage": 20,
     "type": "PartTime / Commissioned",
     "vehicle": {
-      "id": 1,
+      "id": 3,
       "manufacturer": "Royal Enfield",
       "plateNo": "MH455",
       "model": "Classic 350",
@@ -54,13 +67,13 @@
   },
   {
     "id": 4,
-    "name": "John",
+    "name": "John Bond",
     "age": 26,
     "salary": 30.0,
     "bonus": 10,
     "type": "FullTime",
     "vehicle": {
-      "id": 1,
+      "id": 4,
       "vehicleType": "car",
       "manufacturer": "Majda",
       "plateNo": "UP777",
