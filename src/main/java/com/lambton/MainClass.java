@@ -25,7 +25,7 @@ import java.time.LocalDate;
 public class MainClass {
 
     /** Main function*/
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         System.out.println("\n*** PAYROLL SYSTEM ***");
         // get JSON String:
         JSONObject exjObj = new JSONObject(getJsonString());
@@ -111,7 +111,12 @@ public class MainClass {
         NumberFormat formatter = new DecimalFormat("###,###,###.##");
         String total = "TOTAL PAYROLL:" + " " + formatter.format(totalPayroll) + " " + "Canadian Dollars";
         System.out.println(total);
-        Logger.log(total);
+        // Write output into text file
+        try {
+            Logger.log(total);
+        } catch (IOException e) {
+            System.out.println("Something happened wrong" + e);
+        }
     }
 
 
