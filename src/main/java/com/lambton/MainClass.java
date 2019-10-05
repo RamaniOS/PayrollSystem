@@ -99,6 +99,14 @@ public class MainClass {
 
         System.out.println("*-------------------------------------------------------------------------*");
 
+        System.out.println("*-------------------------------------------------------------------------*");
+        EmployeeClass fP10 = new FixedBasedPartTimeEmployee("Jyhn", 24, 30.0f, 10, 40.0f);
+        fP10.printMyData();
+        MotorCycle mC10 = new MotorCycle("N/A", null, null, null, null, 0.00f, 0.00f, 0, null);
+        mC10.printMyDisplay();
+
+        System.out.println("*-------------------------------------------------------------------------*");
+
         float total = (i.calculateEarning() + cP.calculateEarning() + fP.calculateEarning() + fE.calculateEarning());
         System.out.println("TOTAL PAYROLL:" + " " + total + " " + "Canadian Dollars");
     }
