@@ -31,7 +31,6 @@ public class MainClass {
         System.out.println("*-------------------------------------------------------------------------*");
 
         LocalDate insuranceDate1 = LocalDate.parse("2016-12-03");
-        Car ca1 = new Car("car", "Sonata", "PER343", "Sports", insuranceDate1 , 23.50f, 39000.00f, 2, "petrol");
         EmployeeClass commissionBasedPartTimeEmployee = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
         commissionBasedPartTimeEmployee.vehicle = new Vehicle("car", "Dodge", "Dollar01", "Charger", insuranceDate1, 15.0f);
         commissionBasedPartTimeEmployee.printMyData();
