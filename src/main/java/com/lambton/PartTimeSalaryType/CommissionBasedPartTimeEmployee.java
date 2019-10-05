@@ -52,5 +52,6 @@ public class CommissionBasedPartTimeEmployee extends PartTimeEmployee {
         System.out.println("    - HoursWorked:" + " " + getHoursWorked());
         System.out.println("    - Commission:" + " " + getCommissionPercentage()+"%");
         System.out.println("    - Earnings:" + " $" + calculateEarning());
+        getVehicleDetails();
     }
 }
