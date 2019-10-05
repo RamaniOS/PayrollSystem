@@ -28,6 +28,10 @@ public class MainClass {
         fE1.printMyData();
 
         System.out.println("-------------------------------------------------------------------------");
+        FullTimeEmployee f2 = new FullTimeEmployee("Nitin", 26, 32000, 800);
+        fE2.printMyData();
+
+        System.out.println("-------------------------------------------------------------------------");
         InternEmployee i = new InternEmployee("Ramanpreet",  25, "Lambton College");
         i.printMyData();
         LocalDate insuranceDate1 = LocalDate.parse("2016-12-03");
