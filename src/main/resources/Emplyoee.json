@@ -4,7 +4,7 @@
   "age": 23,
   "schoolName": "Lambton College",
   "type": "Intern",
-  "vehicle": null
+  "vehicle": "N/A"
 },
   {
     "id": 2,
@@ -16,22 +16,22 @@
     "type": "PartTime / Fixed Amount",
     "vehicle": {
       "id": 1,
+      "vehicleType": "car",
       "manufacturer": "Tata Motors",
-      "plateNo": "777",
+      "plateNo": "PB777",
       "model": "Jaguar Land Rover",
-      "insuranceDate": "2019-05-03",
+      "insuranceDate": "2016-05-03",
       "mileage": 2.8,
       "details": {
-        "vehicleType": "car",
-        "price": 15550.20,
+        "price": 15650.20,
         "fuelType": "Diesel",
-        "noOfSeats": 4
+        "noOfSeats": 3
       }
     }
   },
   {
     "id": 3,
-    "name": "kiranjeet Kaur",
+    "name": "Kiranjeet Kaur",
     "age": 22,
     "rate": 30.0,
     "hoursWorked": 10,
@@ -40,15 +40,36 @@
     "vehicle": {
       "id": 1,
       "manufacturer": "Royal Enfield",
-      "plateNo": "O 455",
+      "plateNo": "MH455",
       "model": "Classic 350",
-      "insuranceDate": "2018-08-20",
+      "insuranceDate": "2018-11-20",
       "mileage": 11.2,
+      "vehicleType": "motorcycle",
       "details": {
-        "vehicleType": "Motorcycle",
-        "price": 1100.30,
+        "price": 2100.30,
         "fuelType": "Petrol",
         "noOfSeats": 1
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "John",
+    "age": 26,
+    "salary": 30.0,
+    "bonus": 10,
+    "vehicle": {
+      "id": 1,
+      "vehicleType": "car",
+      "manufacturer": "Majda",
+      "plateNo": "UP777",
+      "model": "Sports",
+      "insuranceDate": "2018-12-03",
+      "mileage": 12.8,
+      "details": {
+        "price": 25550.20,
+        "fuelType": "Diesel",
+        "noOfSeats": 7
       }
     }
   }

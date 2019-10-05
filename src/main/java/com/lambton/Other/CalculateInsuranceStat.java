@@ -58,7 +58,7 @@ public class CalculateInsuranceStat {
 
             }
 
-        }else if((currentYear - lastInsuranceYear) == 1){
+        }else if((currentYear - lastInsuranceYear) > 1){
             //to = LocalDate.parse(insuranceDate);
             return "Your insurance has crossed the expiry date, please contact to the insurance agency. :(";
 
@@ -80,7 +80,13 @@ public class CalculateInsuranceStat {
         long days = fromTemp.until(to, ChronoUnit.DAYS);
         fromTemp = fromTemp.plusDays(days);
 
-        String strRemainingDuration = String.format("Your insurance date is in : %s months, %s days", months, days);
+        String strRemainingDuration;
+        if(months > 0){
+            strRemainingDuration = String.format("Your insurance date is in : %s months, %s days", months, days);
+        }else{
+            strRemainingDuration = String.format("Your insurance date is in : %s days", days);
+        }
+
         return strRemainingDuration;
     }
 }
