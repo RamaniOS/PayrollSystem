@@ -58,7 +58,7 @@ public class CalculateInsuranceStat {
 
             }
 
-        }else if((currentYear - lastInsuranceYear) == 1){
+        }else if((currentYear - lastInsuranceYear) > 1){
             //to = LocalDate.parse(insuranceDate);
             return "Your insurance has crossed the expiry date, please contact to the insurance agency. :(";
 

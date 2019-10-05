@@ -72,7 +72,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public void printMyData() {
+    public void printMyDisplay() {
 
         String vehicleType = getVehicleType();
         if(vehicleType == "N/A"){

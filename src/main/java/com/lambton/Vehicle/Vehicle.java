@@ -114,7 +114,7 @@ public abstract class Vehicle implements IDispay {
     // this is an undefined method to get the insurance status of the vehicle.
     public abstract String calculateInsuranceStatus();
 
-    public abstract void printMyData();
+    public abstract void printMyDisplay();
 
 
 }

@@ -71,7 +71,7 @@ public class MotorCycle extends Vehicle{
     }
 
     @Override
-    public void printMyData() {
+    public void printMyDisplay() {
 
 
         String vehicleType = getVehicleType();
