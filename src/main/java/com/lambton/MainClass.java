@@ -47,6 +47,7 @@ public class MainClass {
                 LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
 
                 JSONObject objVDetal = objV.getJSONObject("details");
+
                 fE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 fE.printMyData();
 
@@ -55,10 +56,15 @@ public class MainClass {
             }else if(employeeType.equals("Intern")){
                 // 2.
                 System.out.println("*-------------------------------------------------------------------------*");
+//
+                InternEmployee iE = new InternEmployee(obj.getString("name"),  obj.getInt("age"), obj.getString("schoolName"));
 
-                InternEmployee iE = new InternEmployee("Ramanpreet",  25, "Lambton College");
-                LocalDate insuranceDate1 = LocalDate.parse("2016-12-03");
-                iE.car = new Car("car", "Sonata", "PER343", "Sports", insuranceDate1 , 23.50f, 39000.00f, 2, "petrol");
+                JSONObject objV = obj.getJSONObject("vehicle");
+                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+
+                JSONObject objVDetal = objV.getJSONObject("details");
+
+                iE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 iE.printMyData();
 
                 totalPayroll = totalPayroll + iE.calculateEarning();
@@ -67,9 +73,14 @@ public class MainClass {
                 // 3.
                 System.out.println("*-------------------------------------------------------------------------*");
 
-                EmployeeClass cP = new CommissionBasedPartTimeEmployee("Megan", 24, 30.0f, 10, 20.0f);
-                LocalDate insuranceDate2 = LocalDate.parse("2019-02-01");
-                cP.motorcycle = new MotorCycle("motorcycle", "Honda", "IOP23W", "Sports", insuranceDate2, 23.0f, 26000.00f, 1, "petrol");
+                EmployeeClass cP = new CommissionBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("commissionPercentage"));
+
+                JSONObject objV = obj.getJSONObject("vehicle");
+                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+
+                JSONObject objVDetal = objV.getJSONObject("details");
+
+                cP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 cP.printMyData();
 
                 totalPayroll = totalPayroll + cP.calculateEarning();
@@ -78,9 +89,14 @@ public class MainClass {
                 // 4.
                 System.out.println("*-------------------------------------------------------------------------*");
 
-                EmployeeClass fP = new FixedBasedPartTimeEmployee("John", 24, 30.0f, 10, 40.0f);
-                LocalDate insuranceDate3 = LocalDate.parse("2018-10-29");
-                fP.motorcycle = new MotorCycle("motorcycle", "Yamaha", "POU23W", "Sports", insuranceDate3, 30.0f, 16000.00f, 1, "petrol");
+                EmployeeClass fP = new FixedBasedPartTimeEmployee(obj.getString("name"),  obj.getInt("age"), obj.getFloat("rate"), obj.getInt("hoursWorked"), obj.getFloat("fixedAmount"));
+
+                JSONObject objV = obj.getJSONObject("vehicle");
+                LocalDate insuranceDate = LocalDate.parse(objV.getString("insuranceDate"));
+
+                JSONObject objVDetal = objV.getJSONObject("details");
+
+                fP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 fP.printMyData();
 
                 totalPayroll = totalPayroll + fP.calculateEarning();
@@ -102,23 +118,36 @@ public class MainClass {
                 "  \"age\": 25,\n" +
                 "  \"schoolName\": \"Lambton College\",\n" +
                 "  \"type\": \"Intern\",\n" +
-                "  \"vehicle\": \"N/A\"\n" +
+                "  \"vehicle\": {\n" +
+                "    \"id\": 1,\n" +
+                "    \"vehicleType\": \"car\",\n" +
+                "    \"manufacturer\": \"Ferrari\",\n" +
+                "    \"plateNo\": \"TRE477\",\n" +
+                "    \"model\": \"Sports\",\n" +
+                "    \"insuranceDate\": \"2018-11-05\",\n" +
+                "    \"mileage\": 9.8,\n" +
+                "    \"details\": {\n" +
+                "      \"price\": 45650.20,\n" +
+                "      \"fuelType\": \"Diesel\",\n" +
+                "      \"noOfSeats\": 2\n" +
+                "    }\n" +
+                "  }\n" +
                 "},\n" +
                 "  {\n" +
                 "    \"id\": 2,\n" +
-                "    \"name\": \"Nitin Jaswal\",\n" +
+                "    \"name\": \"Sameer Kumar\",\n" +
                 "    \"age\": 26,\n" +
                 "    \"rate\": 30.0,\n" +
                 "    \"hoursWorked\": 10,\n" +
                 "    \"fixedAmount\": 40.0,\n" +
                 "    \"type\": \"PartTime / Fixed Amount\",\n" +
                 "    \"vehicle\": {\n" +
-                "      \"id\": 1,\n" +
+                "      \"id\": 2,\n" +
                 "      \"vehicleType\": \"car\",\n" +
                 "      \"manufacturer\": \"Tata Motors\",\n" +
                 "      \"plateNo\": \"PB777\",\n" +
                 "      \"model\": \"Jaguar Land Rover\",\n" +
-                "      \"insuranceDate\": \"22018-12-03\",\n" +
+                "      \"insuranceDate\": \"2018-12-03\",\n" +
                 "      \"mileage\": 12.8,\n" +
                 "      \"details\": {\n" +
                 "        \"price\": 25650.20,\n" +
@@ -129,14 +158,14 @@ public class MainClass {
                 "  },\n" +
                 "  {\n" +
                 "    \"id\": 3,\n" +
-                "    \"name\": \"Kiranjeet Kaur\",\n" +
+                "    \"name\": \"Nitin Jaswal\",\n" +
                 "    \"age\": 22,\n" +
                 "    \"rate\": 30.0,\n" +
                 "    \"hoursWorked\": 10,\n" +
                 "    \"commissionPercentage\": 20,\n" +
                 "    \"type\": \"PartTime / Commissioned\",\n" +
                 "    \"vehicle\": {\n" +
-                "      \"id\": 1,\n" +
+                "      \"id\": 3,\n" +
                 "      \"manufacturer\": \"Royal Enfield\",\n" +
                 "      \"plateNo\": \"MH455\",\n" +
                 "      \"model\": \"Classic 350\",\n" +
@@ -152,13 +181,13 @@ public class MainClass {
                 "  },\n" +
                 "  {\n" +
                 "    \"id\": 4,\n" +
-                "    \"name\": \"John\",\n" +
+                "    \"name\": \"John Bond\",\n" +
                 "    \"age\": 26,\n" +
                 "    \"salary\": 30.0,\n" +
                 "    \"bonus\": 10,\n" +
                 "    \"type\": \"FullTime\",\n" +
                 "    \"vehicle\": {\n" +
-                "      \"id\": 1,\n" +
+                "      \"id\": 4,\n" +
                 "      \"vehicleType\": \"car\",\n" +
                 "      \"manufacturer\": \"Majda\",\n" +
                 "      \"plateNo\": \"UP777\",\n" +
