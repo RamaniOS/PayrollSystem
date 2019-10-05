@@ -80,7 +80,13 @@ public class CalculateInsuranceStat {
         long days = fromTemp.until(to, ChronoUnit.DAYS);
         fromTemp = fromTemp.plusDays(days);
 
-        String strRemainingDuration = String.format("Your insurance date is in : %s months, %s days", months, days);
+        String strRemainingDuration;
+        if(months > 0){
+            strRemainingDuration = String.format("Your insurance date is in : %s months, %s days", months, days);
+        }else{
+            strRemainingDuration = String.format("Your insurance date is in : %s days", days);
+        }
+
         return strRemainingDuration;
     }
 }
