@@ -41,5 +41,6 @@ public class FixedBasedPartTimeEmployee extends PartTimeEmployee {
         System.out.println("    - HoursWorked:" + " " + getHoursWorked());
         System.out.println("    - Fixed Amount:" + " $" + getFixedAmount());
         System.out.println("    - Earnings:" + " $" + calculateEarning());
+        getVehicleDetails();
     }
 }
