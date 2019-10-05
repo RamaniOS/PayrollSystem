@@ -51,10 +51,14 @@ public class FullTimeEmployee extends EmployeeClass {
             System.out.println("Something happens wrong" + " " + e);
         }
         System.out.println("Year of Birth:" + " " + getBirthYear());
+
+        // call method to get vehicle detail
+        super.getVehicleDetails();
+
         System.out.println("Employee is FullTime");
         System.out.println("    - Salary:" + " $" + this.salary);
         System.out.println("    - Bonus:" + " $" + this.bonus);
         System.out.println("    - Earning:" + " $" + this.calculateEarning());
-        getVehicleDetails();
+
     }
 }

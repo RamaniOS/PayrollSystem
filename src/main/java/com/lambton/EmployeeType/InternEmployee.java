@@ -44,6 +44,10 @@ public class InternEmployee extends EmployeeClass {
             System.out.println("Something happens wrong" + " " + e);
         }
         System.out.println("Year of Birth:" + " " + getBirthYear());
+
+        // call method to get vehicle detail
+        super.getVehicleDetails();
+
         System.out.println("Employee is Intern");
         System.out.println("    - SchoolName:" + " " + getSchoolName());
         System.out.println("    - Earnings:" + " $" + calculateEarning());
