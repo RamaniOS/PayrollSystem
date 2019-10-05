@@ -33,7 +33,6 @@ public abstract class Vehicle implements IDispay {
 
     /** Constructor*/
 
-
     public Vehicle(String vehicleType, String manufacturer, String plateNo, String model, LocalDate insuranceDate, float milage) {
         this.vehicleType = vehicleType;
         this.manufacturer = manufacturer;
@@ -118,14 +117,6 @@ public abstract class Vehicle implements IDispay {
 
     }
 
-
-
-    // this is an undefined method to get the insurance status of the vehicle.
-    // public abstract String calculateInsuranceStatus();
-
-
      public abstract void printMyDisplay();
-
-
 
 }
