@@ -83,7 +83,7 @@ public abstract class EmployeeClass implements IPrintable {
             }
         }else {
 
-            System.out.println("Employee has no vehicle");
+            System.out.println("Employee has no Vehicle registered");
         }
     }
 }
