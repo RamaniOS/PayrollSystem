@@ -35,6 +35,7 @@ public class MainClass {
             for (int i = 0; i < arr.length(); i++){
 
                 JSONObject obj = arr.getJSONObject(i);
+
             String employeeType = obj.getString("type");
 
             if(employeeType.equals("FullTime")){
@@ -51,6 +52,7 @@ public class MainClass {
 
                     JSONObject objVDetal = objV.getJSONObject("details");
 
+                    // can apply check on objV.getString("vehicleType")
                     fE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
 
                 }
@@ -70,6 +72,7 @@ public class MainClass {
 
                     JSONObject objVDetal = objV.getJSONObject("details");
 
+                    // can apply check on objV.getString("vehicleType")
                     iE.car = new Car(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
                 }
                  iE.printMyData();
@@ -88,6 +91,7 @@ public class MainClass {
 
                     JSONObject objVDetal = objV.getJSONObject("details");
 
+                    // can apply check on objV.getString("vehicleType")
                     cP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
 
                 }
@@ -108,6 +112,7 @@ public class MainClass {
 
                     JSONObject objVDetal = objV.getJSONObject("details");
 
+                    // can apply check on objV.getString("vehicleType")
                     fP.motorcycle = new MotorCycle(objV.getString("vehicleType"), objV.getString("manufacturer"), objV.getString("plateNo"), objV.getString("model"), insuranceDate, objV.getFloat("mileage"),  objVDetal.getFloat("price"), objVDetal.getInt("noOfSeats"), objVDetal.getString("fuelType"));
 
                 }
